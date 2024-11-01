@@ -2,6 +2,7 @@ import React from "react";
 import HeaderSection from "../HeaderSection";
 import { datas } from "@/utils/datas";
 import { truncateText } from "@/utils/truncateText";
+import Image from "next/image";
 
 const Entertainment = () => {
   return (
@@ -16,7 +17,10 @@ const Entertainment = () => {
           (data, index) =>
             index < 6 && (
               <div key={index} className="relative rounded-lg overflow-hidden">
-                <img
+                <Image
+                  width={400}
+                  height={400}
+                  alt="Image"
                   className="h-[140px] md:h-[200px] w-full object-cover object-center"
                   src={data.imageUrl}
                 />
