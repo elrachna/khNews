@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-400 text-slate-800">
       <Container>
-        <div className="h-[20vh] justify-center flex flex-col space-y-4">
+        <div className="h-[20vh] justify-center flex flex-col space-y-6">
           <ul className="flex gap-4 justify-center text-blue-800">
             {navLinks.map((link, index) => (
               <li key={index}>
@@ -24,12 +24,24 @@ const Footer = () => {
             ))}
           </ul>
           <div className="flex gap-9 justify-center text-xl">
-            <FaFacebook />
-            <FaInstagram />
-            <FaTelegram />
-            <FaX />
-            <FaYoutube />
-            <FaTiktok />
+            <Link href="/">
+              <FaFacebook />
+            </Link>
+            <Link href="/">
+              <FaInstagram />
+            </Link>
+            <Link href="/">
+              <FaTelegram />
+            </Link>
+            <Link href="/">
+              <FaX />
+            </Link>
+            <Link href="/">
+              <FaYoutube />
+            </Link>
+            <Link href="/">
+              <FaTiktok />
+            </Link>
           </div>
 
           <p className="flex justify-center text-sm opacity-50">

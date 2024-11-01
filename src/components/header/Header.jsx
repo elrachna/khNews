@@ -32,7 +32,7 @@ export const navLinks = [
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full overflow-hidden bg-slate-700 bg-opacity-40 shadow-2xl">
+    <header className="sticky bg-slate-400 top-0 z-10 w-full overflow-hidden shadow-2xl">
       <div className="py-4">
         <Container>
           <nav className="flex justify-between items-center">
@@ -44,10 +44,13 @@ const Header = () => {
               >
                 <h2>News</h2>
               </Link>
-              <ul className="text-blue-800 hidden lg:flex items-center gap-4">
+              <ul className="text-blue-800 hidden md:flex items-center gap-4">
                 {navLinks.map((link) => (
                   <li className="text-base cursor-pointer" key={link.label}>
-                    <Link className="bayon text-xl " href={link.href}>
+                    <Link
+                      className="bayon font-bold text-sm lg:text-xl"
+                      href={link.href}
+                    >
                       {link.label}
                     </Link>
                   </li>
@@ -61,7 +64,7 @@ const Header = () => {
                   <Search className="absolute top-2 left-3" />
                 </button>
                 <input
-                  className="min-w-[30vw] bg-slate-700 py-2 px-11 rounded-xl"
+                  className="bg-slate-700 py-2 px-11 rounded-xl"
                   type="text"
                   placeholder="Search..."
                   name="search"

@@ -8,15 +8,46 @@
 }
 
 body {
-  font-family: var(--font-noto-serif-khmer);
+  font-family: var(--font-battambang);
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-family: var(--font-bayon);
+}
+
+.SFPro {
+  font-family: var(--font-sf-pro-text-regular);
 }
 
 .bayon {
   font-family: var(--font-bayon);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
 }

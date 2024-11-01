@@ -1,8 +1,8 @@
 import localFont from "next/font/local";
-import { Bayon } from "next/font/google";
+import { Battambang, Bayon } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
 
 const sfProText = localFont({
   src: "./fonts/SFProTextRegular.otf",
@@ -16,6 +16,12 @@ const bayon = Bayon({
   variable: "--font-bayon",
 });
 
+const battambang = Battambang({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-battambang",
+});
+
 export const metadata = {
   title: "Khmer News",
   description: "Khmer News",
@@ -24,15 +30,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khmer:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={`antialiased`}>
-        <div className="flex flex-col h-screen">
-          <Header />
+      <body className={`${battambang.className} antialiased`}>
+        <Header />
+        <div className="flex flex-col h-screen mt-2">
           <main className="flex flex-grow">{children}</main>
           <Footer />
         </div>
