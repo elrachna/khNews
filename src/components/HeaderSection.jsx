@@ -16,7 +16,7 @@ const HeaderSection = ({ title, bgColor, textColor }) => {
           <h2 className="cursor-pointer text-lg font-semibold SFPro">
             View All
           </h2>
-          <ArrowRight className="cursor-pointer" />
+          <ArrowRight className="cursor-pointer mb-1" />
         </Link>
       </div>
       <div className={`${bgColor} h-3 w-full`}></div>
