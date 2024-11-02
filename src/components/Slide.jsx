@@ -46,7 +46,7 @@ export default function Slide({ datas }) {
                   className="w-full object-center object-cover"
                 />
                 <div className="bg-black absolute bottom-0 bg-opacity-30 text-white">
-                  <div className="px-4 py-4 space-y-2">
+                  <div className="px-4 mb-4 py-4 space-y-2">
                     <h3 className="text-xs sm:text-sm md:text-base">
                       {truncateText3(`${data.title}`)}
                     </h3>
