@@ -17,7 +17,10 @@ const Sport = () => {
           {datas.map(
             (data, index) =>
               index < 3 && (
-                <div className="rounded-lg overflow-hidden shadow-xl space-y-2">
+                <div
+                  key={index}
+                  className="rounded-lg overflow-hidden shadow-xl space-y-2"
+                >
                   <Image
                     src={data.imageUrl}
                     width={400}
@@ -34,7 +37,7 @@ const Sport = () => {
                       <p>ចំនួនមតិ 0 | ចំនួនចែករំលែក​ 0</p>
                     </div>
                   </div>
-                  <h3 className="pb-2 px-4 text-xs md:text-sm">
+                  <h3 className="pb-2 px-4 text-[0.6rem] md:text-sm">
                     {truncateText(`${data.title}`)}
                   </h3>
                 </div>
@@ -46,7 +49,7 @@ const Sport = () => {
           (data, index) =>
             index >= 3 &&
             index === 11 && (
-              <div className="grid grid-cols-4 grid-rows-2">
+              <div key={index} className="grid grid-cols-4 grid-rows-2">
                 <Image
                   src={data.imageUrl}
                   width={400}
