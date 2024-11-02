@@ -11,16 +11,20 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Image from "next/image";
+import { truncateText2 } from "@/utils/truncateText2";
+import { truncateText3 } from "@/utils/truncateText3";
+import { truncateText4 } from "@/utils/truncateText4";
 
-export default function Slide() {
+export default function Slide({ datas }) {
   return (
-    <>
+    <div className="h-[280px] md:h-[440px]">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
         autoplay={{
-          delay: 3500,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -30,16 +34,31 @@ export default function Slide() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {datas.map(
+          (data, index) =>
+            index < 10 && (
+              <SwiperSlide key={index} className="relative">
+                <Image
+                  src={data.imageUrl}
+                  width={1000}
+                  height={1000}
+                  alt="Slide"
+                  className="w-full object-center object-cover"
+                />
+                <div className="bg-black absolute bottom-0 bg-opacity-30 text-white">
+                  <div className="px-4 py-4 space-y-2">
+                    <h3 className="text-xs sm:text-sm md:text-base">
+                      {truncateText3(`${data.title}`)}
+                    </h3>
+                    <h4 className="text-[0.5rem] md:text-xs">
+                      {truncateText4(`${data.description}`)}
+                    </h4>
+                  </div>
+                </div>
+              </SwiperSlide>
+            )
+        )}
       </Swiper>
-    </>
+    </div>
   );
 }
