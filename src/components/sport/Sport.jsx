@@ -3,6 +3,7 @@ import HeaderSection from "../HeaderSection";
 import { datas } from "@/utils/datas";
 import Image from "next/image";
 import { truncateText } from "@/utils/truncateText";
+import { truncateText2 } from "@/utils/truncateText2";
 
 const Sport = () => {
   return (
@@ -12,7 +13,8 @@ const Sport = () => {
         textColor={"text-green-600"}
         bgColor={"bg-green-600"}
       />
-      <div className="grid grid-rows-2">
+      <div className="grid">
+        {/* Big Card */}
         <div className="grid grid-cols-3 gap-2">
           {datas.map(
             (data, index) =>
@@ -44,23 +46,30 @@ const Sport = () => {
               )
           )}
         </div>
-
-        {/* {datas.map(
-          (data, index) =>
-            index >= 3 &&
-            index === 11 && (
-              <div key={index} className="grid grid-cols-4 grid-rows-2">
-                <Image
-                  src={data.imageUrl}
-                  width={400}
-                  height={400}
-                  alt="Image"
-                  className=""
-                />
-                <h3>{truncateText(`${data.title}`)}</h3>
-              </div>
-            )
-        )} */}
+        {/* Small Card */}
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          {datas.map(
+            (data, index) =>
+              index >= 3 &&
+              index < 11 && (
+                <div
+                  key={index}
+                  className="h-[90px] flex mt-2 md:mt-4 ml-2 items-center rounded-lg overflow-hidden shadow-xl"
+                >
+                  <Image
+                    src={data.imageUrl}
+                    width={200}
+                    height={200}
+                    alt="Image"
+                    className="w-1/2 h-full object-cover object-center"
+                  />
+                  <h3 className="py-2 px-2 text-[0.6rem] lg:text-xs">
+                    {truncateText2(`${data.title}`)}
+                  </h3>
+                </div>
+              )
+          )}
+        </div>
       </div>
     </div>
   );

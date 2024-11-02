@@ -25,7 +25,7 @@ const Entertainment = () => {
                   src={data.imageUrl}
                 />
                 <div className="absolute bottom-0 w-full bg-black bg-opacity-45">
-                  <h3 className="px-4 py-2 text-white text-xs md:text-sm">
+                  <h3 className="px-4 py-2 text-white text-[0.6rem] md:text-sm">
                     {truncateText(`${data.title}`)}
                   </h3>
                 </div>
