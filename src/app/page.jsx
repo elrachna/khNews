@@ -10,8 +10,10 @@ export default function Home() {
       <Container>
         <Entertainment />
         <Sport />
-        <Entertainment />
-        <div className="w-screen h-[200vh]"></div>
+        <div className="bg-red-700 mt-4 h-6 w-full SFPro text-2xl text-white font-bold py-6 flex items-center justify-center">
+          Sponsor
+        </div>
+        <div className="w-screen h-[100vh]"></div>
       </Container>
     </section>
   );

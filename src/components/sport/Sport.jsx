@@ -15,13 +15,13 @@ const Sport = () => {
       />
       <div className="grid">
         {/* Big Card */}
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-2 mb-1">
           {datas.map(
             (data, index) =>
               index < 3 && (
                 <div
                   key={index}
-                  className="rounded-lg overflow-hidden shadow-xl space-y-2"
+                  className="rounded-lg overflow-hidden shadow-lg space-y-2"
                 >
                   <Image
                     src={data.imageUrl}
@@ -47,14 +47,14 @@ const Sport = () => {
           )}
         </div>
         {/* Small Card */}
-        <div className="grid grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {datas.map(
             (data, index) =>
               index >= 3 &&
               index < 11 && (
                 <div
                   key={index}
-                  className="h-[90px] flex mt-2 md:mt-4 ml-2 items-center rounded-lg overflow-hidden shadow-xl"
+                  className="h-[90px] flex mt-1 md:mt-2 items-center rounded-lg overflow-hidden shadow-lg"
                 >
                   <Image
                     src={data.imageUrl}

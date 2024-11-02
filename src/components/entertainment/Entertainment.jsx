@@ -16,7 +16,10 @@ const Entertainment = () => {
         {datas.map(
           (data, index) =>
             index < 6 && (
-              <div key={index} className="relative rounded-lg overflow-hidden">
+              <div
+                key={index}
+                className="relative rounded-lg overflow-hidden shadow-md"
+              >
                 <Image
                   width={400}
                   height={400}
