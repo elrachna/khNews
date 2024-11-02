@@ -26,7 +26,7 @@ const HeaderSection = ({ title, bgColor, textColor }) => {
           <ArrowRight className="cursor-pointer mb-1" />
         </Link>
       </div>
-      <div className={`${bgColor} h-3 w-full`}></div>
+      <div className={`${bgColor} h-2 w-full`}></div>
     </div>
   );
 };
