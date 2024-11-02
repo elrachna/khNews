@@ -6,6 +6,9 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.kdramaomo.com",
       },
+      {
+        hostname: "image.tmdb.org",
+      },
     ],
   },
 };

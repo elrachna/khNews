@@ -61,7 +61,7 @@ const Sport = () => {
                     width={200}
                     height={200}
                     alt="Image"
-                    className="w-1/2 h-full object-cover object-center"
+                    className="w-[500px] overflow-hidden h-full object-cover object-center"
                   />
                   <h3 className="py-2 px-2 text-[0.6rem] lg:text-xs">
                     {truncateText2(`${data.title}`)}

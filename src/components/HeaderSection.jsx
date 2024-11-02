@@ -7,18 +7,18 @@ const HeaderSection = ({ title, bgColor, textColor }) => {
   return (
     <div className="text-white mt-4">
       <div className="my-1 flex justify-between items-center">
+        {/* Left */}
         <Link
           href="/"
-          className={`${bgColor} h-10 w-[150px] relative overflow-hidden`}
+          className={`${bgColor} pl-4 pr-14 py-[0.50rem] relative overflow-hidden flex items-center`}
         >
-          <h2 className="absolute my-auto top-[0.4rem] px-6 text-xl">
-            {title}
-          </h2>
+          <h2 className="text-xl">{title}</h2>
           <div
-            className="ml-[60%] h-full border-t-[40px] border-l-[45px] border-t-white border-l-transparent"
+            className="absolute h-full right-0 border-t-[45px] border-l-[45px] border-t-white border-l-transparent"
             aria-hidden="true"
           />
         </Link>
+        {/* Right */}
         <Link href="/" className={`${textColor} flex items-end gap-4 px-6`}>
           <h2 className="cursor-pointer text-lg font-semibold SFPro">
             View All
