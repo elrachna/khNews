@@ -5,7 +5,7 @@ import Container from "./Container";
 
 const HeaderSection = ({ title, bgColor, textColor }) => {
   return (
-    <div className="text-white mt-4">
+    <div className="text-white mt-4 mb-2">
       <div className="my-1 flex justify-between items-center">
         {/* Left */}
         <Link
