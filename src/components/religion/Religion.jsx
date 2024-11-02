@@ -7,7 +7,7 @@ import { truncateText } from "@/utils/truncateText";
 
 const Religion = () => {
   return (
-    <div>
+    <div className="mb-4">
       <HeaderSection
         title={"ជំនឿសាសនា"}
         textColor={"text-yellow-500"}
