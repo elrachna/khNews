@@ -13,9 +13,9 @@ const Religion = () => {
         textColor={"text-yellow-500"}
         bgColor={"bg-yellow-500"}
       />
-      <div className="flex items-center justify-center flex-col md:flex-row gap-2">
+      <div className="flex flex-col md:flex-row space-x-2 space-y-4">
         {/* 2 Cols Grid big one */}
-        <div className="grid grid-rows-1 grid-cols-3 md:grid-cols-3 gap-2 mt-4">
+        <div className="grid grid-rows-1 grid-cols-3 md:grid-cols-3 space-x-2 mt-4">
           {/* Big Card */}
           {datas.map(
             (data, index) =>
@@ -65,7 +65,7 @@ const Religion = () => {
                       src={data.imageUrl}
                     />
                     <div className="flex gap-1 md:gap-2">
-                      <h2 className="bg-yellow-500 text-[.5rem] text-white py-1 px-4 md:px-6 flex items-center justify-center">
+                      <h2 className="bg-yellow-500 text-[0.4rem] md:text-[0.6rem] text-white py-1 px-4 md:px-6 flex items-center justify-center">
                         ជំនឿសាសនា
                       </h2>
                       <div className="text-[0.30rem] md:text-[0.4rem] flex flex-col justify-center">
@@ -82,7 +82,7 @@ const Religion = () => {
           </div>
         </div>
         {/* Small Card flex */}
-        <div className="mt-4 grid grid-cols-2 md:grid-cols-1 gap-2">
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-1">
           {datas.map(
             (data, index) =>
               index >= 3 &&
@@ -98,16 +98,16 @@ const Religion = () => {
                     className="w-full h-[120px] md:h-[200px] object-cover object-center"
                     src={data.imageUrl}
                   />
-                  <div className="flex gap-2">
-                    <h2 className="bg-yellow-500 text-xs text-white py-1 px-6">
+                  <div className="flex gap-1 md:gap-2">
+                    <h2 className="bg-yellow-500 text-[0.4rem] md:text-[0.6rem] text-white py-1 px-4 md:px-6 flex items-center justify-center">
                       ជំនឿសាសនា
                     </h2>
-                    <div className="text-[0.34rem] md:text-[0.5rem] flex flex-col justify-center">
+                    <div className="text-[0.30rem] md:text-[0.4rem] flex flex-col justify-center">
                       <p>ថ្ងៃនេះ ម៉ោង 14:02</p>
                       <p>ចំនួនមតិ 0 | ចំនួនចែករំលែក​ 0</p>
                     </div>
                   </div>
-                  <h3 className="pb-2 px-4 text-[0.6rem] md:text-xs">
+                  <h3 className="pb-2 px-4 text-[0.5rem] md:text-xs">
                     {truncateText(`${data.title}`)}
                   </h3>
                 </div>

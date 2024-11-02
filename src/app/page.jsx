@@ -14,6 +14,7 @@ export default function Home() {
           Sponsor
         </div>
         <Religion />
+        <div className="w-full h-[100vh]"></div>
       </Container>
     </section>
   );
