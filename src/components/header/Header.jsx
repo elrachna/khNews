@@ -48,7 +48,7 @@ const Header = () => {
                 {navLinks.map((link) => (
                   <li className="text-base cursor-pointer" key={link.label}>
                     <Link
-                      className="bayon font-bold text-sm lg:text-xl"
+                      className="bayon font-bold text-xs sm:text-[0.8rem] lg:text-xl"
                       href={link.href}
                     >
                       {link.label}

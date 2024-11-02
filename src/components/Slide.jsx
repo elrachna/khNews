@@ -12,7 +12,6 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
-import { truncateText2 } from "@/utils/truncateText2";
 import { truncateText3 } from "@/utils/truncateText3";
 import { truncateText4 } from "@/utils/truncateText4";
 
