@@ -1,15 +1,12 @@
 import Container from "@/components/Container";
 import { datas } from "@/utils/datas";
-import { truncateText } from "@/utils/truncateText";
 import { truncateText2 } from "@/utils/truncateText2";
-import { truncateText3 } from "@/utils/truncateText3";
 import { truncateText4 } from "@/utils/truncateText4";
 import { truncateText5 } from "@/utils/truncateText5";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-const EntertainmentPage = () => {
+const SportPage = () => {
   return (
     <div className="w-full">
       <Container>
@@ -18,16 +15,16 @@ const EntertainmentPage = () => {
           <div className="my-1 flex justify-between items-center">
             {/* Left */}
             <div
-              className={`bg-red-600 pl-4 pr-14 py-[0.50rem] relative overflow-hidden flex items-center`}
+              className={`bg-green-600 pl-4 pr-14 py-[0.50rem] relative overflow-hidden flex items-center`}
             >
-              <h2 className="text-xl">កម្សាន្ត</h2>
+              <h2 className="text-xl">កីឡា</h2>
               <div
                 className="absolute h-full right-0 border-t-[45px] border-l-[45px] border-t-white border-l-transparent"
                 aria-hidden="true"
               />
             </div>
           </div>
-          <div className={`bg-red-600 h-2 w-full`}></div>
+          <div className={`bg-green-600 h-2 w-full`}></div>
         </div>
 
         {/* Big Section */}
@@ -150,4 +147,4 @@ const EntertainmentPage = () => {
   );
 };
 
-export default EntertainmentPage;
+export default SportPage;

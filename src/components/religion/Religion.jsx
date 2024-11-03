@@ -4,6 +4,7 @@ import Image from "next/image";
 import { truncateText3 } from "@/utils/truncateText3";
 import { truncateText2 } from "@/utils/truncateText2";
 import { truncateText } from "@/utils/truncateText";
+import Link from "next/link";
 
 const Religion = () => {
   return (
@@ -12,6 +13,7 @@ const Religion = () => {
         title={"ជំនឿសាសនា"}
         textColor={"text-yellow-500"}
         bgColor={"bg-yellow-500"}
+        label={"/religion"}
       />
       <div className="flex flex-col md:flex-row space-x-2 space-y-4">
         {/* 2 Cols Grid big one */}
@@ -20,7 +22,8 @@ const Religion = () => {
           {datas.map(
             (data, index) =>
               index === 0 && (
-                <div
+                <Link
+                  href={`/article/${data.id}`}
                   key={index}
                   className="grid col-span-2 rounded-lg text-white shadow-lg relative"
                 >
@@ -44,7 +47,7 @@ const Religion = () => {
                       </h3>
                     </div>
                   </div>
-                </div>
+                </Link>
               )
           )}
           {/* Small Card */}
@@ -53,7 +56,8 @@ const Religion = () => {
               (data, index) =>
                 index > 0 &&
                 index < 3 && (
-                  <div
+                  <Link
+                    href={`/article/${data.id}`}
                     key={index}
                     className="space-y-2 shadow-lg rounded-lg overflow-hidden"
                   >
@@ -76,7 +80,7 @@ const Religion = () => {
                     <h3 className="pb-2 px-4 text-[0.5rem] md:text-xs">
                       {truncateText(`${data.title}`)}
                     </h3>
-                  </div>
+                  </Link>
                 )
             )}
           </div>
@@ -87,7 +91,8 @@ const Religion = () => {
             (data, index) =>
               index >= 3 &&
               index < 5 && (
-                <div
+                <Link
+                  href={`/article/${data.id}`}
                   key={index}
                   className="space-y-2 shadow-lg rounded-lg overflow-hidden"
                 >
@@ -110,7 +115,7 @@ const Religion = () => {
                   <h3 className="pb-2 px-4 text-[0.5rem] md:text-xs">
                     {truncateText(`${data.title}`)}
                   </h3>
-                </div>
+                </Link>
               )
           )}
         </div>

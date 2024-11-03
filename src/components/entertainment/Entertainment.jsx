@@ -3,6 +3,7 @@ import HeaderSection from "../HeaderSection";
 import { datas } from "@/utils/datas";
 import { truncateText } from "@/utils/truncateText";
 import Image from "next/image";
+import Link from "next/link";
 
 const Entertainment = () => {
   return (
@@ -11,12 +12,14 @@ const Entertainment = () => {
         title={"កម្សាន្ត"}
         textColor={"text-red-600"}
         bgColor={"bg-red-600"}
+        label={"/entertainment"}
       />
       <div className="overflow-hidden grid grid-cols-2 md:grid-cols-3 gap-2">
         {datas.map(
           (data, index) =>
             index < 6 && (
-              <div
+              <Link
+                href={`/article/${data.id}`}
                 key={index}
                 className="relative rounded-lg overflow-hidden shadow-md"
               >
@@ -32,7 +35,7 @@ const Entertainment = () => {
                     {truncateText(`${data.title}`)}
                   </h3>
                 </div>
-              </div>
+              </Link>
             )
         )}
       </div>

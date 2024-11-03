@@ -4,6 +4,7 @@ import { datas } from "@/utils/datas";
 import Image from "next/image";
 import { truncateText } from "@/utils/truncateText";
 import { truncateText2 } from "@/utils/truncateText2";
+import Link from "next/link";
 
 const Sport = () => {
   return (
@@ -12,6 +13,7 @@ const Sport = () => {
         title={"កីឡា"}
         textColor={"text-green-600"}
         bgColor={"bg-green-600"}
+        label={"/sport"}
       />
       <div className="grid">
         {/* Big Card */}
@@ -19,7 +21,8 @@ const Sport = () => {
           {datas.map(
             (data, index) =>
               index < 3 && (
-                <div
+                <Link
+                  href={`/article/${data.id}`}
                   key={index}
                   className="rounded-lg overflow-hidden shadow-lg space-y-2"
                 >
@@ -42,7 +45,7 @@ const Sport = () => {
                   <h3 className="pb-2 px-4 text-[0.6rem] md:text-sm">
                     {truncateText(`${data.title}`)}
                   </h3>
-                </div>
+                </Link>
               )
           )}
         </div>
@@ -52,7 +55,8 @@ const Sport = () => {
             (data, index) =>
               index >= 3 &&
               index < 11 && (
-                <div
+                <Link
+                  href={`/article/${data.id}`}
                   key={index}
                   className="h-[90px] flex mt-1 md:mt-2 items-center rounded-lg overflow-hidden shadow-lg"
                 >
@@ -66,7 +70,7 @@ const Sport = () => {
                   <h3 className="py-2 px-2 text-[0.6rem] lg:text-xs">
                     {truncateText2(`${data.title}`)}
                   </h3>
-                </div>
+                </Link>
               )
           )}
         </div>

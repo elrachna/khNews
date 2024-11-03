@@ -1,15 +1,14 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import Container from "./Container";
 
-const HeaderSection = ({ title, bgColor, textColor }) => {
+const HeaderSection = ({ title, bgColor, textColor, label }) => {
   return (
     <div className="text-white mt-4 mb-2">
       <div className="my-1 flex justify-between items-center">
         {/* Left */}
         <Link
-          href="/"
+          href={`${label}`}
           className={`${bgColor} pl-4 pr-14 py-[0.50rem] relative overflow-hidden flex items-center`}
         >
           <h2 className="text-xl">{title}</h2>
@@ -19,7 +18,10 @@ const HeaderSection = ({ title, bgColor, textColor }) => {
           />
         </Link>
         {/* Right */}
-        <Link href="/" className={`${textColor} flex items-end gap-4 px-6`}>
+        <Link
+          href={`${label}`}
+          className={`${textColor} flex items-end gap-4 px-6`}
+        >
           <h2 className="cursor-pointer text-lg font-semibold SFPro">
             View All
           </h2>

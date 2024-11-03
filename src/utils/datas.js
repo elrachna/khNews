@@ -18,7 +18,7 @@ export const datas = [
       "https://image.tmdb.org/t/p/original/4hXEVbqGLMQG1SL4882BnBKgqEr.jpg",
   },
   {
-    id: 2,
+    id: 3,
     title:
       "iPhone 15 Pro Max ធំបំផុតរបស់ពិភពលោក ដែលមានកម្ពស់២ម៉ែត្រ និងមានមុខងារធម្មតាដូច iPhone ពិតជាធំបំផុតរបស់ពិភពលោក ដែលមានកម្ពស់២ម៉ែត្រ និងមានមុខងារធម្មតាដូច iPhone ពិត",
     description:
