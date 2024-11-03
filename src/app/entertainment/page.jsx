@@ -31,6 +31,7 @@ const EntertainmentPage = () => {
           <div className={`bg-red-600 h-2 w-full`}></div>
         </div>
 
+        {/* Big Section */}
         <div className="flex flex-col lg:flex-row gap-2">
           {/*Grid Card */}
           <div className="grid grid-cols-3 grid-rows-2 gap-2 lg:w-[1800px]">
@@ -116,6 +117,30 @@ const EntertainmentPage = () => {
               )}
             </div>
           </div>
+        </div>
+        {/* Small Section */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 grid-rows-4 gap-2 my-2">
+          {datas.map(
+            (data, index) =>
+              index >= 7 &&
+              index < 23 && (
+                <div
+                  key={index}
+                  className="rounded-lg overflow-hidden shadow-lg"
+                >
+                  <Image
+                    src={data.imageUrl}
+                    width={1000}
+                    height={1000}
+                    alt="Image"
+                    className="w-full h-[140px] object-cover object-center"
+                  />
+                  <h3 className="text-[0.6rem] py-2 px-2">
+                    {truncateText4(`${data.title}`)}
+                  </h3>
+                </div>
+              )
+          )}
         </div>
       </Container>
     </div>
