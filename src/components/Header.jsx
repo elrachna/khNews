@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "../Container";
+import Container from "./Container";
 import Link from "next/link";
 import { Search } from "lucide-react";
 
@@ -32,15 +32,15 @@ export const navLinks = [
 
 const Header = () => {
   return (
-    <header className="sticky bg-slate-400 top-0 z-10 w-full overflow-hidden shadow-2xl">
+    <header className="sticky bg-slate-100 top-0 z-10 w-full overflow-hidden shadow-2xl">
       <div className="py-4">
         <Container>
           <nav className="flex justify-between items-center">
             {/* Left */}
-            <div className="flex gap-4">
+            <div className="flex gap-20">
               <Link
                 href="/"
-                className="flex items-center text-3xl font-semibold text-red-500"
+                className="flex items-center text-3xl text-red-500"
               >
                 <h2>News</h2>
               </Link>
@@ -48,7 +48,7 @@ const Header = () => {
                 {navLinks.map((link) => (
                   <li className="text-base cursor-pointer" key={link.label}>
                     <Link
-                      className="bayon font-bold text-xs sm:text-[0.8rem] lg:text-xl"
+                      className="bayon text-xs sm:text-[0.8rem] lg:text-xl"
                       href={link.href}
                     >
                       {link.label}
@@ -58,13 +58,13 @@ const Header = () => {
               </ul>
             </div>
             {/* Right */}
-            <div className="text-white flex items-center gap-4">
-              <div className="relative ">
+            <div className="flex items-center gap-4">
+              <div className="relative">
                 <button type="submit" name="search">
-                  <Search className="absolute top-2 left-3" />
+                  <Search className="absolute top-2 left-3 text-gray-500" />
                 </button>
                 <input
-                  className="bg-slate-700 py-2 px-11 rounded-xl"
+                  className="bg-gray-300 py-2 pl-11 pr-5 rounded-md focus:outline-none focus:border-gray-400 transition duration-100 ease-in-out border text-gray-700"
                   type="text"
                   placeholder="Search..."
                   name="search"

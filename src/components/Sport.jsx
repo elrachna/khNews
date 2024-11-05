@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderSection from "../HeaderSection";
+import HeaderSection from "./HeaderSection";
 import { datas } from "@/utils/datas";
 import Image from "next/image";
 import { truncateText } from "@/utils/truncateText";

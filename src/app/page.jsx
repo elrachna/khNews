@@ -1,9 +1,10 @@
 import Container from "@/components/Container";
-import Entertainment from "@/components/entertainment/Entertainment";
-import Religion from "@/components/religion/Religion";
+import Entertainment from "@/components/Entertainment";
+import Religion from "@/components/Religion";
 import Slide from "@/components/Slide";
-import Sport from "@/components/sport/Sport";
+import Sport from "@/components/Sport";
 import { datas } from "@/utils/datas";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (

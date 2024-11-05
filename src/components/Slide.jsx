@@ -18,13 +18,13 @@ import Link from "next/link";
 
 export default function Slide({ datas }) {
   return (
-    <div className="h-[280px] md:h-[440px]">
+    <div className="h-[280px] md:h-[540px]">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -46,7 +46,7 @@ export default function Slide({ datas }) {
                     alt="Slide"
                     className="w-full object-center object-cover"
                   />
-                  <div className="bg-black absolute bottom-0 bg-opacity-30 text-white">
+                  <div className="bg-black absolute bottom-0 bg-opacity-30 w-full text-white">
                     <div className="px-4 mb-4 py-4 space-y-2">
                       <h3 className="text-xs sm:text-sm md:text-base">
                         {truncateText3(`${data.title}`)}

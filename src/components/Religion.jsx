@@ -1,5 +1,5 @@
 import { datas } from "@/utils/datas";
-import HeaderSection from "../HeaderSection";
+import HeaderSection from "./HeaderSection";
 import Image from "next/image";
 import { truncateText3 } from "@/utils/truncateText3";
 import { truncateText2 } from "@/utils/truncateText2";
@@ -25,7 +25,7 @@ const Religion = () => {
                 <Link
                   href={`/article/${data.id}`}
                   key={index}
-                  className="grid col-span-2 rounded-lg text-white shadow-lg relative"
+                  className="grid col-span-2 rounded-md text-white shadow-lg relative"
                 >
                   <Image
                     width={400}
@@ -59,7 +59,7 @@ const Religion = () => {
                   <Link
                     href={`/article/${data.id}`}
                     key={index}
-                    className="space-y-2 shadow-lg rounded-lg overflow-hidden"
+                    className="space-y-2 shadow-lg rounded-md overflow-hidden"
                   >
                     <Image
                       width={400}
@@ -94,7 +94,7 @@ const Religion = () => {
                 <Link
                   href={`/article/${data.id}`}
                   key={index}
-                  className="space-y-2 shadow-lg rounded-lg overflow-hidden"
+                  className="space-y-2 shadow-lg rounded-md overflow-hidden"
                 >
                   <Image
                     width={400}

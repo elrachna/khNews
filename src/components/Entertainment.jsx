@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderSection from "../HeaderSection";
+import HeaderSection from "./HeaderSection";
 import { datas } from "@/utils/datas";
 import { truncateText } from "@/utils/truncateText";
 import Image from "next/image";
@@ -7,21 +7,21 @@ import Link from "next/link";
 
 const Entertainment = () => {
   return (
-    <div className="space-y-2">
+    <div className="space-y-3.5">
       <HeaderSection
         title={"កម្សាន្ត"}
         textColor={"text-red-600"}
         bgColor={"bg-red-600"}
         label={"/entertainment"}
       />
-      <div className="overflow-hidden grid grid-cols-2 md:grid-cols-3 gap-2">
+      <div className="overflow-hidden grid grid-cols-2 md:grid-cols-3 gap-2.5">
         {datas.map(
           (data, index) =>
             index < 6 && (
               <Link
                 href={`/article/${data.id}`}
                 key={index}
-                className="relative rounded-lg overflow-hidden shadow-md"
+                className="relative rounded-md overflow-hidden shadow-md"
               >
                 <Image
                   width={400}

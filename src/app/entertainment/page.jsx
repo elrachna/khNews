@@ -1,8 +1,6 @@
 import Container from "@/components/Container";
 import { datas } from "@/utils/datas";
-import { truncateText } from "@/utils/truncateText";
 import { truncateText2 } from "@/utils/truncateText2";
-import { truncateText3 } from "@/utils/truncateText3";
 import { truncateText4 } from "@/utils/truncateText4";
 import { truncateText5 } from "@/utils/truncateText5";
 import Image from "next/image";

@@ -1,8 +1,9 @@
 import localFont from "next/font/local";
 import { Battambang, Bayon } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const sfProText = localFont({
   src: "./fonts/SFProTextRegular.otf",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${battambang.className} antialiased scroll-smooth`}>
+        <ScrollToTop />
         <Header />
         <div className="flex flex-col h-screen mt-2">
           <main className="flex flex-grow">{children}</main>
