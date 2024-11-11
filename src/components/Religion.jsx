@@ -15,9 +15,9 @@ const Religion = () => {
         bgColor={"bg-yellow-500"}
         label={"/religion"}
       />
-      <div className="flex flex-col md:flex-row space-x-2 space-y-4">
+      <div className="flex flex-col md:flex-row space-x-2.5 space-y-4">
         {/* 2 Cols Grid big one */}
-        <div className="grid grid-rows-1 grid-cols-3 md:grid-cols-3 space-x-2 mt-4">
+        <div className="grid grid-rows-1 grid-cols-3 md:grid-cols-3 space-x-2.5 mt-4">
           {/* Big Card */}
           {datas.map(
             (data, index) =>
@@ -51,7 +51,7 @@ const Religion = () => {
               )
           )}
           {/* Small Card */}
-          <div className="grid grid-rows-2 gap-2">
+          <div className="grid grid-rows-2 gap-3">
             {datas.map(
               (data, index) =>
                 index > 0 &&
@@ -69,15 +69,15 @@ const Religion = () => {
                       src={data.imageUrl}
                     />
                     <div className="flex gap-1 md:gap-2">
-                      <h2 className="bg-yellow-500 text-[0.4rem] md:text-[0.6rem] text-white py-1 px-4 md:px-6 flex items-center justify-center">
+                      <h2 className="bg-yellow-500 text-[14px] md:text-[15px] text-white px-4 pt-2">
                         ជំនឿសាសនា
                       </h2>
-                      <div className="text-[0.30rem] md:text-[0.4rem] flex flex-col justify-center">
+                      <div className="text-[12px] flex flex-col justify-center">
                         <p>ថ្ងៃនេះ ម៉ោង 14:02</p>
-                        <p>ចំនួនមតិ 0 | ចំនួនចែករំលែក​ 0</p>
+                        <p>ចំនួនមតិ 0</p>
                       </div>
                     </div>
-                    <h3 className="pb-2 px-4 text-[0.5rem] md:text-xs">
+                    <h3 className="pb-2 px-4 text-[14px] md:text-[15px]">
                       {truncateText(`${data.title}`)}
                     </h3>
                   </Link>
@@ -86,7 +86,7 @@ const Religion = () => {
           </div>
         </div>
         {/* Small Card flex */}
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-1">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-1">
           {datas.map(
             (data, index) =>
               index >= 3 &&
@@ -104,15 +104,15 @@ const Religion = () => {
                     src={data.imageUrl}
                   />
                   <div className="flex gap-1 md:gap-2">
-                    <h2 className="bg-yellow-500 text-[0.4rem] md:text-[0.6rem] text-white py-1 px-4 md:px-6 flex items-center justify-center">
+                    <h2 className="bg-yellow-500 text-[14px] md:text-[15px] text-white px-4 pt-2">
                       ជំនឿសាសនា
                     </h2>
-                    <div className="text-[0.30rem] md:text-[0.4rem] flex flex-col justify-center">
+                    <div className="text-[12px] flex flex-col justify-center">
                       <p>ថ្ងៃនេះ ម៉ោង 14:02</p>
-                      <p>ចំនួនមតិ 0 | ចំនួនចែករំលែក​ 0</p>
+                      <p>ចំនួនមតិ 0</p>
                     </div>
                   </div>
-                  <h3 className="pb-2 px-4 text-[0.5rem] md:text-xs">
+                  <h3 className="pb-2 px-4 text-[14px] md:text-[15px]">
                     {truncateText(`${data.title}`)}
                   </h3>
                 </Link>

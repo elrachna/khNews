@@ -4,6 +4,10 @@ import { datas } from "@/utils/datas";
 import { truncateText } from "@/utils/truncateText";
 import Image from "next/image";
 import Link from "next/link";
+import { truncateText5 } from "@/utils/truncateText5";
+import { truncateText4 } from "@/utils/truncateText4";
+import { truncateText3 } from "@/utils/truncateText3";
+import { truncateText2 } from "@/utils/truncateText2";
 
 const Entertainment = () => {
   return (
@@ -31,8 +35,8 @@ const Entertainment = () => {
                   src={data.imageUrl}
                 />
                 <div className="absolute bottom-0 w-full bg-black bg-opacity-45">
-                  <h3 className="px-4 py-2 text-white text-[0.6rem] md:text-sm">
-                    {truncateText(`${data.title}`)}
+                  <h3 className="px-4 py-2 text-white text-[16px]">
+                    {truncateText5(`${data.title}`)}
                   </h3>
                 </div>
               </Link>

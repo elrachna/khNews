@@ -11,7 +11,7 @@ const HeaderSection = ({ title, bgColor, textColor, label }) => {
           href={`${label}`}
           className={`${bgColor} pl-4 pr-14 py-[0.50rem] relative overflow-hidden flex items-center`}
         >
-          <h2 className="text-xl">{title}</h2>
+          <h2 className="text-2xl">{title}</h2>
           <div
             className="absolute h-full right-0 border-t-[45px] border-l-[45px] border-t-white border-l-transparent"
             aria-hidden="true"

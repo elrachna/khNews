@@ -3,7 +3,7 @@ import { Battambang, Bayon } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import ScrollToTop from "@/components/ScrollToTop";
+import ScrollToTop from "@/utils/ScrollToTop";
 
 const sfProText = localFont({
   src: "./fonts/SFProTextRegular.otf",

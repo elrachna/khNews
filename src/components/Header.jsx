@@ -32,7 +32,7 @@ export const navLinks = [
 
 const Header = () => {
   return (
-    <header className="sticky bg-slate-100 top-0 z-10 w-full overflow-hidden shadow-2xl">
+    <header className="sticky bg-slate-100 top-0 z-10 w-full overflow-hidden shadow-2xl select-none">
       <div className="py-4">
         <Container>
           <nav className="flex justify-between items-center">
@@ -60,15 +60,15 @@ const Header = () => {
             {/* Right */}
             <div className="flex items-center gap-4">
               <div className="relative">
-                <button type="submit" name="search">
-                  <Search className="absolute top-2 left-3 text-gray-500" />
-                </button>
                 <input
-                  className="bg-gray-300 py-2 pl-11 pr-5 rounded-md focus:outline-none focus:border-gray-400 transition duration-100 ease-in-out border text-gray-700"
+                  className="bg-gray-300 py-2 pl-4 pr-11 rounded-md focus:outline-none focus:border-gray-400 transition duration-100 ease-in-out border text-gray-700"
                   type="text"
                   placeholder="Search..."
                   name="search"
                 />
+                <button type="submit" name="search">
+                  <Search className="absolute top-2 right-3 text-gray-500" />
+                </button>
               </div>
             </div>
           </nav>

@@ -4,11 +4,10 @@ import Religion from "@/components/Religion";
 import Slide from "@/components/Slide";
 import Sport from "@/components/Sport";
 import { datas } from "@/utils/datas";
-import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <section className="w-full">
+    <section className="w-full pt-1">
       <Container>
         <Slide datas={datas} />
         <Entertainment />

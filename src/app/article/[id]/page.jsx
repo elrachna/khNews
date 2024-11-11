@@ -18,10 +18,10 @@ const Id = ({ params }) => {
           {/* Left */}
           <div className="col-span-2">
             <div className="mb-3">
-              <h2 className="text-base sm:text-xl md:text-2xl text-red-700 ">
+              <h2 className="text-base sm:text-xl md:text-2xl text-red-700 pb-2">
                 {data.title}
               </h2>
-              <p className="text-xs px-4 pt-1 w-[180px] bg-red-600 text-white">
+              <p className="text-[14px] text-nowrap px-4 pt-1 w-[190px] select-none bg-red-600 text-white">
                 30 តុលា 2024 | ម៉ោង 02:08
               </p>
               <div className="bg-red-600 w-full h-1"></div>
@@ -64,9 +64,7 @@ const Id = ({ params }) => {
           {/* Right */}
           <div className="col-span-1 space-y-4">
             <div className="space-y-3 md:space-y-2">
-              <h2 className="text-red-600 text-base md:text-xl">
-                អត្ថបទពេញនិយម
-              </h2>
+              <h2 className="text-red-600 text-2xl">អត្ថបទពេញនិយម</h2>
               {datas.map(
                 (data, index) =>
                   index < 6 && (
@@ -74,7 +72,7 @@ const Id = ({ params }) => {
                       <Link
                         href={`/article/${data.id}`}
                         key={index}
-                        className="h-[60px] md:h-[90px] flex items-center rounded-lg overflow-hidden shadow-lg"
+                        className="h-[60px] md:h-[90px] flex items-center rounded-md border border-gray-200 shadow overflow-hidden"
                       >
                         <Image
                           src={data.imageUrl}
@@ -83,7 +81,7 @@ const Id = ({ params }) => {
                           alt="Image"
                           className="w-[360px] md:w-[300px] h-full overflow-hidden object-cover object-center"
                         />
-                        <h3 className="py-2 px-2 text-[0.4rem] md:text-xs">
+                        <h3 className="py-2 px-2 text-[14px]">
                           {truncateText5(`${data.title}`)}
                         </h3>
                       </Link>
@@ -92,7 +90,7 @@ const Id = ({ params }) => {
               )}
             </div>
             <div className="space-y-3 md:space-y-2">
-              <h2 className="text-red-600 text-base md:text-xl">អត្ថបទថ្មីៗ</h2>
+              <h2 className="text-red-600 text-2xl">អត្ថបទថ្មីៗ</h2>
               {datas.map(
                 (data, index) =>
                   index < 6 && (
@@ -100,7 +98,7 @@ const Id = ({ params }) => {
                       <Link
                         href={`/article/${data.id}`}
                         key={index}
-                        className="h-[60px] md:h-[90px] flex items-center rounded-lg overflow-hidden shadow-lg"
+                        className="h-[60px] md:h-[90px] flex items-center rounded-md border border-gray-200 shadow overflow-hidden"
                       >
                         <Image
                           src={data.imageUrl}
@@ -109,7 +107,7 @@ const Id = ({ params }) => {
                           alt="Image"
                           className="w-[360px] md:w-[300px] h-full overflow-hidden object-cover object-center"
                         />
-                        <h3 className="py-2 px-2 text-[0.4rem] md:text-xs">
+                        <h3 className="py-2 px-2 text-[14px]">
                           {truncateText5(`${data.title}`)}
                         </h3>
                       </Link>

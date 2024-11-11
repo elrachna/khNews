@@ -10,18 +10,26 @@
 body {
   font-family: var(--font-battambang);
 }
-
 h1,
 h2 {
   font-family: var(--font-bayon);
 }
-
 .SFPro {
   font-family: var(--font-sf-pro-text-regular);
 }
-
 .bayon {
   font-family: var(--font-bayon);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply select-none;
+}
+button {
+  @apply select-none focus:outline-none border-none border-transparent;
 }
 
 .swiper {
